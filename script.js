@@ -4,7 +4,7 @@ let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY'];
 
 //Randomly select a word and prompt the user to guess the word. 
 let randWord = words[Math.floor(Math.random()*words.length)];
-let guess = prompt('Enter your guess: ').toUpperCase();
+//let guess = prompt('Enter your guess: ').toUpperCase();
 
 //If the guess is wrong, up the counter and ask user to guess again
 for(let i = 0; i < 6; i++) {

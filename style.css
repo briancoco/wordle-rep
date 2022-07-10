@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(16, 16, 16);
+}
+h1 {
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.box {
+    border : 2px solid rgb(56, 54, 54);
+    width: 62px;
+    height: 62px;
+    color: white;
+    font-size:50px;
+    text-align: center;
+}
+
