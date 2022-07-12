@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(16, 16, 16);
+    background-color: #121213;
 }
 h1 {
     text-align: center;
@@ -25,3 +25,14 @@ h1 {
     text-align: center;
 }
 
+.wrong-place {
+    background-color: #b59f3b;
+}
+
+.no-match {
+    background-color: #3a3a3c;
+}
+
+.match {
+    background-color: #538d4e;
+}

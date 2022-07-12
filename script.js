@@ -62,7 +62,7 @@ for(let i = 0; i < 6; i++) {
     for(let j = 0; j < 5; j++) {
         const div = document.createElement('div');
         div.classList.add('box')
-        div.classList.add(`${i}${j}`)
+        div.classList.add(`b${i}${j}`)
         container.appendChild(div);
     }
 }
