@@ -72,6 +72,30 @@ const body = document.querySelector('body');
 const container = document.querySelector('.container');
 let letter;
 
+
+
+function updateBoard() {
+    for(let i = 0; i < 6; i++){
+        for(let j = 0; j < 5; j++){
+            const div = document.querySelector(`.b${i}${j}`);
+            div.textContent = stats.board[i][j];
+        }
+    }
+}
+function createBoard() {
+    for(let i = 0; i < 6; i++) {
+
+        for(let j = 0; j < 5; j++) {
+            const div = document.createElement('div');
+            div.classList.add('box');
+            div.classList.add(`b${i}${j}`);
+            container.appendChild(div);
+        }
+    }
+}
+
+createBoard();
+
 body.addEventListener('keydown', (e) => {
     letter = e.key.toUpperCase();
     if(stats.column == 5) {
@@ -84,24 +108,3 @@ body.addEventListener('keydown', (e) => {
 
     updateBoard();
 })
-
-
-function updateBoard() {
-    for(let i = 0; i < 6; i++){
-        for(let j = 0; j < 5; j++){
-            const div = document.querySelector(`.b${i}${j}`);
-            div.textContent = stats.board[i][j];
-        }
-    }
-}
-
-for(let i = 0; i < 6; i++) {
-
-    for(let j = 0; j < 5; j++) {
-        const div = document.createElement('div');
-        div.classList.add('box');
-        div.classList.add(`b${i}${j}`);
-        container.appendChild(div);
-    }
-}
-
