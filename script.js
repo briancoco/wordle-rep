@@ -54,15 +54,54 @@ function matchingLetters(randWord, guess) {
 }
 */
 
+//Array variable that holds a lot of 5 letter words.
+let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY'];
+
+//Randomly select a word and prompt the user to guess the word. 
+let randWord = words[Math.floor(Math.random()*words.length)];
+
+let stats = {
+    board : Array(6)
+        .fill()
+        .map(() => Array(5).fill('')),
+    row : 0,
+    column : 0,
+}
+
 const body = document.querySelector('body');
 const container = document.querySelector('.container');
+let letter;
+
+body.addEventListener('keydown', (e) => {
+    letter = e.key.toUpperCase();
+    if(stats.column == 5) {
+        stats.column = 0;
+        stats.row++;
+    }
+    
+    stats.board[stats.row][stats.column] = letter;
+    stats.column++;
+
+    updateBoard();
+})
+
+
+function updateBoard() {
+    for(let i = 0; i < 6; i++){
+        for(let j = 0; j < 5; j++){
+            const div = document.querySelector(`.b${i}${j}`);
+            div.textContent = stats.board[i][j];
+        }
+    }
+}
 
 for(let i = 0; i < 6; i++) {
 
     for(let j = 0; j < 5; j++) {
         const div = document.createElement('div');
-        div.classList.add('box')
-        div.classList.add(`b${i}${j}`)
+        div.classList.add('box');
+        div.classList.add(`b${i}${j}`);
         container.appendChild(div);
     }
 }
+
