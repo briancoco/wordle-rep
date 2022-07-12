@@ -9,15 +9,17 @@ h1 {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    width: 350px;
+    height: 420px;
     gap: 5px;
+    margin: auto;
 }
 
 .box {
     border : 2px solid rgb(56, 54, 54);
-    width: 62px;
-    height: 62px;
     color: white;
     font-size:50px;
     text-align: center;

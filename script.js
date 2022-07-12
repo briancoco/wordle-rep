@@ -1,10 +1,10 @@
 //Array variable that holds a lot of 5 letter words.
-let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY'];
+/*let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY'];
 
 
 //Randomly select a word and prompt the user to guess the word. 
 let randWord = words[Math.floor(Math.random()*words.length)];
-//let guess = prompt('Enter your guess: ').toUpperCase();
+let guess = prompt('Enter your guess: ').toUpperCase();
 
 //If the guess is wrong, up the counter and ask user to guess again
 for(let i = 0; i < 6; i++) {
@@ -52,4 +52,17 @@ function matchingLetters(randWord, guess) {
     console.log('Right letters, right place: ' + rightString);
     console.log('Right letters, wrong place: ' + wrongString);
 }
+*/
 
+const body = document.querySelector('body');
+const container = document.querySelector('.container');
+
+for(let i = 0; i < 6; i++) {
+
+    for(let j = 0; j < 5; j++) {
+        const div = document.createElement('div');
+        div.classList.add('box')
+        div.classList.add(`${i}${j}`)
+        container.appendChild(div);
+    }
+}
