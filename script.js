@@ -119,6 +119,12 @@ function winner(board) {
 createBoard();
 
 body.addEventListener('keydown', (e) => {
+    console.log(e);
+    if(e.key == 'Backspace') {
+        stats.column--;
+        stats.board[stats.row][stats.column] = '';
+        updateBoard();
+    }
     if(e.code.includes('Key')){
         letter = e.key.toUpperCase();
         if(stats.column == 5) {
