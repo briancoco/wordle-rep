@@ -129,7 +129,6 @@ body.addEventListener('keydown', (e) => {
         letter = e.key.toUpperCase();
         if(stats.column == 5) {
             stats.column = 0;
-            win = winner(stats.board[stats.row]);
             stats.row++;
         }
         if(!win) {
@@ -140,21 +139,9 @@ body.addEventListener('keydown', (e) => {
         }
         if(stats.column == 5) {
             win = winner(stats.board[stats.row]);
+            
         }
     }
 
-    /*if(stats.column == 5) {
-        stats.column = 0;
-        win = winner(stats.board[stats.row]);
-        stats.row++;
-    }
-    if(!win) {
-        stats.board[stats.row][stats.column] = letter;
-        stats.column++;
-
-        updateBoard();
-    }
-    if(stats.column == 5) {
-        win = winner(stats.board[stats.row]);
-    }*/
+   
 })
