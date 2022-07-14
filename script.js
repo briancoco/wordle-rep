@@ -101,8 +101,12 @@ body.addEventListener('keydown', (e) => {
         //checks for winner and stops game from running if so
         if(stats.column == 5) {
             win = winner(stats.board[stats.row]);
+            if(stats.row == 5) {
+                win = true;
+            }
             
         }
+        
     }
 
    
