@@ -1,5 +1,5 @@
 //Array variable that holds a lot of 5 letter words.
-let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY'];
+let words = ['HELLO', 'BROWN', 'CRAZY', 'QUICK', 'JIGGY', 'ABOUT', 'ADULT', 'APPLE', 'LEASE', 'LOGIC', 'SHARE', 'TRUTH', 'TRACK', 'VIRUS', 'YOUTH'];
 let win = false;
 //Randomly select a word and prompt the user to guess the word. 
 let randWord = words[Math.floor(Math.random()*words.length)];
